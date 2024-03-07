@@ -1,0 +1,25 @@
+﻿@model DAL.Models.UserDetail
+
+
+@using (Html.BeginForm("singleuser", "update", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <br />
+    <div class="msglable">@ViewData["SuccessMsg"]</div>
+    <br />
+    <h1>Edit User Information</h1>
+    <div class="formcontainer">
+        <hr />
+        <div class="container">
+            <label for="name"><strong>Name</strong></label>
+            <input type="text" name="name" id="name" required value="@Model.name">
+            <label for="surname"><strong>Surname</strong></label>
+            <input type="text" name="surname" id="surname" required value="@Model.surname">
+            <label for="cellphone"><strong>Cellphone Number</strong></label>
+            <input type="text" onkeypress="return NumberOnly(event)" minlength="10" maxlength="10" name="cellphone" id="cellphone" required value="@Model.cellphone">
+            <input type="hidden" name="PreviousCellphone" id="PreviousCellphone" value="@Model.cellphone"/>
+        </div>
+        <button type="submit">Update User</button>
+        <br />
+    </div>
+}
+

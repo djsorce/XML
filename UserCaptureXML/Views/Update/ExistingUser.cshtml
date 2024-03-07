@@ -1,0 +1,43 @@
+﻿@model IEnumerable<DAL.Models.UserDetail>
+
+
+    <form>
+    <br />
+    <div class="msglable">@TempData["SuccessMsg"]</div>
+    <br />
+    <h1>Update User Information</h1>
+    <div class="formcontainer">
+        <hr />
+        <div class="container">
+        <div class="table-responsive-lg">
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for names.."><br />
+                <table class="table table-striped custSize" id="UsrTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Cellphone Number</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                                <tr>
+                                <td>@item.name</td>
+                                <td>@item.surname</td>
+                                <td>@item.cellphone</td>
+                                <td><a href="~/update/singleuser?key=@item.cellphone&actionkey=1" name="Key" id="Key" class="btn btn-primary">Edit</a></td>
+                                <td><a href="~/update/singleuser?key=@item.cellphone&actionkey=2" name="Key" id="Key" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">Remove</a></td>
+                                </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br />
+    </div>
+</form>
+    
+

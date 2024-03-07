@@ -1,0 +1,21 @@
+﻿@using (Html.BeginForm("newuser", "capture", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <br />
+    <div class="msglable">@ViewData["SuccessMsg"]</div>
+    <br />
+      <h1>Capture User Information</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="name"><strong>Name</strong></label>
+        <input type="text" placeholder="Enter Name" name="name" id="name" required>
+        <label for="surname"><strong>Surname</strong></label>
+        <input type="text" placeholder="Enter Surame" name="surname" id="surname" required>
+        <label for="cellphone"><strong>Cellphone Number</strong></label>
+         <input type="text" onkeypress="return NumberOnly(event)" minlength="10" maxlength="10" placeholder="Enter Cellphone Number" name="cellphone" id="cellphone" required>
+      </div>
+      <button type="submit">Add User</button>
+      <br/>
+      </div>
+}
+

@@ -1,0 +1,94 @@
+html, body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+}
+
+form {
+    border: 5px solid #808080;
+    margin-top: 25px;
+    box-shadow: 10px 50px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #8ebf42;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.formcontainer {
+    text-align: left;
+    margin: 25px;
+    max-width: 500px;
+
+}
+
+.container {
+    padding: 16px 0;
+    text-align: left;
+
+}
+
+.msglable {
+    font-weight: bold;
+    font-size: 18px;
+    color: #8ebf42;
+    text-align: center;
+    padding: 5px;
+    max-width: 500px;
+    text-align: center;
+/*    border: 3px solid #8ebf42;*/
+    width: 80%;
+    margin: auto;
+}
+/* Change styles for span on extra small screens */
+@media screen and (max-width: 300px) {
+    .msglable {
+        display: block;
+        float: none;
+    }
+}
+
+.btn_ {
+    display: inline;
+    margin-right: 20px;
+    cursor: grabbing;
+}
+
+.custSize {
+    width: 500px
+}
+
+#searchInput {
+    background-image: url('../img/searchicon.png'); 
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+}
