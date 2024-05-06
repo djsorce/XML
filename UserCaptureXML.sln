@@ -7,9 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User.DataAccessLayer", "Use
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User.Web", "User.Web", "{AF766A44-D9FD-4577-906B-4E7D57D45879}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserCaptureXML", "UserCaptureXML\UserCaptureXML.csproj", "{41853433-8A56-4849-8773-5C860906F5A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserCaptureXML", "UserCaptureXML\UserCaptureXML.csproj", "{41853433-8A56-4849-8773-5C860906F5A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{57109AFD-E159-4838-ACA7-8ECAC3C5A874}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{57109AFD-E159-4838-ACA7-8ECAC3C5A874}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C6889521-6080-48BB-8D17-11772628EE6E}"
+	ProjectSection(SolutionItems) = preProject
+		Test\GlobalUsings.cs = Test\GlobalUsings.cs
+		Test\Test.csproj = Test\Test.csproj
+		Test\UserDetails.Xml = Test\UserDetails.Xml
+		Test\UsersUnitTest.cs = Test\UsersUnitTest.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
