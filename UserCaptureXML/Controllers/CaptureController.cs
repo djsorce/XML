@@ -10,10 +10,17 @@ namespace UserCaptureXML.Controllers
     public class CaptureController : Controller
     {
         private readonly IUserRepository _usersRepository = new UserRepository();
+        private readonly IConfiguration _config;
+        public CaptureController(IConfiguration config)
+        {
+            _config = config;
+        }
+
 
         [HttpGet]
         public IActionResult NewUser()
         {
+            var RequireUppercase = _config.GetValue<string>("Words:One");
             return View();
         }
 

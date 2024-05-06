@@ -46,7 +46,8 @@ namespace DAL.Repository
                 else
                 {
                     XDocument xDocument = await Task.Run(() => XDocument.Load(ConstantStrings.FilePath));
-                    XElement? root = xDocument.Element(ConstantStrings.Users);
+                    XElement root = xDocument.Element(ConstantStrings.Users)!;
+
                     IEnumerable<XElement> rows = root.Descendants(ConstantStrings.User);
                     XElement firstRow = rows.First();
                     firstRow.AddBeforeSelf(
@@ -54,12 +55,12 @@ namespace DAL.Repository
                        new XElement(ConstantStrings.Name, User.name),
                        new XElement(ConstantStrings.Surname, User.surname),
                        new XElement(ConstantStrings.CellphoneNumber, User.cellphone)));
-                       xDocument.Save(ConstantStrings.FilePath);
+                    xDocument.Save(ConstantStrings.FilePath);
                 }
                 isCompleted = true;
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception)
+            {
                 isCompleted = false;
             }
             return isCompleted;
@@ -76,10 +77,10 @@ namespace DAL.Repository
                 if (File.Exists(ConstantStrings.FilePath))
                 {
                     XDocument xDocument = await Task.Run(() => XDocument.Load(ConstantStrings.FilePath));
-                    XElement? root = xDocument.Element(ConstantStrings.Users);
+                    XElement root = xDocument.Element(ConstantStrings.Users)!;
                     IEnumerable<XElement> rows = root.Descendants(ConstantStrings.User);
                     Response = new List<UserDetail>();
-                    foreach (XElement row in rows) 
+                    foreach (XElement row in rows)
                     {
                         userDetail = new UserDetail
                         {
@@ -91,14 +92,14 @@ namespace DAL.Repository
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string Msg = ex.Message.ToString();
+                //log exception ex.Message
             }
             return Response;
         }
 
-        public async Task<UserDetail> GetSingleUserByCell(string Cellphone)
+        public async Task<UserDetail?> GetSingleUserByCell(string Cellphone)
         {
             UserDetail? userDetail = null;
             try
@@ -107,7 +108,7 @@ namespace DAL.Repository
                 if (File.Exists(ConstantStrings.FilePath))
                 {
                     XDocument xDocument = await Task.Run(() => XDocument.Load(ConstantStrings.FilePath));
-                    XElement? root = xDocument.Element(ConstantStrings.Users);
+                    XElement root = xDocument.Element(ConstantStrings.Users)!;
                     IEnumerable<XElement> rows = root.Descendants(ConstantStrings.User);
                     foreach (XElement row in rows)
                     {
@@ -119,14 +120,17 @@ namespace DAL.Repository
                                 surname = row.Descendants(ConstantStrings.Surname).First().Value,
                                 cellphone = row.Descendants(ConstantStrings.CellphoneNumber).First().Value,
                             };
-                            break;
+                        }
+                        else
+                        {
+                            //do nothing here
                         }
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string Msg = ex.Message.ToString();
+                //log exception ex.Message
             }
             return userDetail;
         }
@@ -141,7 +145,7 @@ namespace DAL.Repository
                 if (File.Exists(ConstantStrings.FilePath))
                 {
                     XDocument xDocument = await Task.Run(() => XDocument.Load(ConstantStrings.FilePath));
-                    XElement? root = xDocument.Element(ConstantStrings.Users);
+                    XElement root = xDocument.Element(ConstantStrings.Users)!;
                     IEnumerable<XElement> rows = root.Descendants(ConstantStrings.User);
                     foreach (XElement row in rows)
                     {
@@ -156,7 +160,7 @@ namespace DAL.Repository
                             }
                             else
                             {
-                                isCompleted = false; 
+                                isCompleted = false;
                                 break;
                             }
                         }
@@ -164,9 +168,9 @@ namespace DAL.Repository
                     xDocument.Save(ConstantStrings.FilePath);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string Msg = ex.Message.ToString();
+                //log exception ex.Message
             }
             return isCompleted;
         }
@@ -177,29 +181,31 @@ namespace DAL.Repository
             bool isUpdated = false;
             try
             {
-                //Check if the file exists and return a list of users
                 if (File.Exists(ConstantStrings.FilePath))
                 {
                     XDocument xDocument = await Task.Run(() => XDocument.Load(ConstantStrings.FilePath));
-                    XElement? root = xDocument.Element(ConstantStrings.Users);
+                    XElement root = xDocument.Element(ConstantStrings.Users)!;
                     IEnumerable<XElement> rows = root.Descendants(ConstantStrings.User);
                     foreach (XElement row in rows)
                     {
                         if (row.Descendants(ConstantStrings.CellphoneNumber).First().Value == PreviousCellphone)
                         {
-                            row.Descendants(ConstantStrings.CellphoneNumber).First().Value = User.cellphone;
-                            row.Descendants(ConstantStrings.Name).First().Value = User.name;
-                            row.Descendants(ConstantStrings.Surname).First().Value = User.surname;
+                            row.Descendants(ConstantStrings.CellphoneNumber).First().Value = User.cellphone!;
+                            row.Descendants(ConstantStrings.Name).First().Value = User.name!;
+                            row.Descendants(ConstantStrings.Surname).First().Value = User.surname!;
                         }
-                        break;
+                        else
+                        {
+                            //do nothing here
+                        }
                     }
                     xDocument.Save(ConstantStrings.FilePath);
                 }
                 isUpdated = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string Msg = ex.Message.ToString();
+                //log exception ex.Message
             }
             return isUpdated;
         }

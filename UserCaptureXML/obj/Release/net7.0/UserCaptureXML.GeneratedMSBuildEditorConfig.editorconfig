@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UserCaptureXML
 build_property.RootNamespace = UserCaptureXML
-build_property.ProjectDir = C:\Users\AndrewMolefe\Source\Repos\XML\UserCaptureXML\
+build_property.ProjectDir = C:\Users\AndrewMolefe\Source\Repos\djsorce\XML\UserCaptureXML\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\AndrewMolefe\Source\Repos\XML\UserCaptureXML
+build_property.MSBuildProjectDirectory = C:\Users\AndrewMolefe\Source\Repos\djsorce\XML\UserCaptureXML
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/AndrewMolefe/Source/Repos/XML/UserCaptureXML/Views/Capture/NewUser.cshtml]
+[C:/Users/AndrewMolefe/Source/Repos/djsorce/XML/UserCaptureXML/Views/Capture/NewUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FwdHVyZVxOZXdVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AndrewMolefe/Source/Repos/XML/UserCaptureXML/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/AndrewMolefe/Source/Repos/djsorce/XML/UserCaptureXML/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AndrewMolefe/Source/Repos/XML/UserCaptureXML/Views/Update/ExistingUser.cshtml]
+[C:/Users/AndrewMolefe/Source/Repos/djsorce/XML/UserCaptureXML/Views/Update/ExistingUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBkYXRlXEV4aXN0aW5nVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AndrewMolefe/Source/Repos/XML/UserCaptureXML/Views/Update/SingleUser.cshtml]
+[C:/Users/AndrewMolefe/Source/Repos/djsorce/XML/UserCaptureXML/Views/Update/SingleUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBkYXRlXFNpbmdsZVVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AndrewMolefe/Source/Repos/XML/UserCaptureXML/Views/_ViewImports.cshtml]
+[C:/Users/AndrewMolefe/Source/Repos/djsorce/XML/UserCaptureXML/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AndrewMolefe/Source/Repos/XML/UserCaptureXML/Views/_ViewStart.cshtml]
+[C:/Users/AndrewMolefe/Source/Repos/djsorce/XML/UserCaptureXML/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/AndrewMolefe/Source/Repos/XML/UserCaptureXML/Views/Shared/_Layout.cshtml]
+[C:/Users/AndrewMolefe/Source/Repos/djsorce/XML/UserCaptureXML/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l51uaxge42

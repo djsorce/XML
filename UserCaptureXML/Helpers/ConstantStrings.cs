@@ -1,6 +1,6 @@
 ﻿namespace UserCaptureXML.Helpers
 {
-    internal class ConstantStrings
+    internal static class ConstantStrings
     {
         //Text variables
         public const string SuccessMsg = "User was added successfully";
@@ -10,5 +10,6 @@
         public const string ExistingUser = "existinguser";
         public const string SingleUser = "singleuser";
         public const string Update = "update";
+        public const string MsgOK = "SuccessMsg";
     }
 }

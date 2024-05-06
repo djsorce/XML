@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Files\\UserCaptureXML\\UserCaptureXML\\UserCaptureXML.csproj",
+      "projectUniqueName": "C:\\Users\\AndrewMolefe\\source\\repos\\djsorce\\XML\\UserCaptureXML\\UserCaptureXML.csproj",
       "projectName": "UserCaptureXML",
-      "projectPath": "C:\\Files\\UserCaptureXML\\UserCaptureXML\\UserCaptureXML.csproj",
+      "projectPath": "C:\\Users\\AndrewMolefe\\source\\repos\\djsorce\\XML\\UserCaptureXML\\UserCaptureXML.csproj",
       "packagesPath": "C:\\Users\\AndrewMolefe\\.nuget\\packages\\",
-      "outputPath": "C:\\Files\\UserCaptureXML\\UserCaptureXML\\obj\\",
+      "outputPath": "C:\\Users\\AndrewMolefe\\Source\\Repos\\djsorce\\XML\\UserCaptureXML\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AndrewMolefe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Files\\UserCaptureXML\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Files\\UserCaptureXML\\DAL\\DAL.csproj"
+            "C:\\Users\\AndrewMolefe\\source\\repos\\djsorce\\XML\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\AndrewMolefe\\source\\repos\\djsorce\\XML\\DAL\\DAL.csproj"
             }
           }
         }

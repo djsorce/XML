@@ -25,7 +25,7 @@ namespace UserCaptureXML.Controllers
             {
                 //Do something with the exception here
                 //Log exception to error log file or database
-                ViewData["SuccessMsg"] = Ex.Message.ToString();
+                ViewData[ConstantStrings.MsgOK] = Ex.Message.ToString();
             }
             return View(ConstantStrings.ExistingUser, users);
         }
@@ -34,7 +34,7 @@ namespace UserCaptureXML.Controllers
         [HttpGet]
         public async Task<IActionResult> SingleUser(string Key,int ActionKey)
         {
-            UserDetail user = null;
+            UserDetail? user = null;
             try
             {
                 if (ActionKey == (int)EnumActions.Edit)
@@ -48,11 +48,11 @@ namespace UserCaptureXML.Controllers
                     var Response = await _usersRepository.DeleteUserByCell(Key);
                     if (Response == true)
                     {
-                        TempData["SuccessMsg"] = ConstantStrings.SuccessMsgDel;
+                        TempData[ConstantStrings.MsgOK] = ConstantStrings.SuccessMsgDel;
                     }
                     else
                     {
-                        TempData["SuccessMsg"] = ConstantStrings.NoSuccessMsg;
+                        TempData[ConstantStrings.MsgOK] = ConstantStrings.NoSuccessMsg;
                     }
                     return RedirectToAction(ConstantStrings.ExistingUser, ConstantStrings.Update);
                 }
@@ -62,7 +62,7 @@ namespace UserCaptureXML.Controllers
             {
                 //Do something with the exception here
                 //Log exception to error log file or database
-                ViewData["SuccessMsg"] = Ex.Message.ToString();
+                ViewData[ConstantStrings.MsgOK] = Ex.Message.ToString();
             }
             return View(ConstantStrings.SingleUser, user);
         }
@@ -70,24 +70,23 @@ namespace UserCaptureXML.Controllers
         [HttpPost]
         public async Task<IActionResult> SingleUser(UserDetail User, string PreviousCellphone)
         {
-            List<UserDetail>? users = null;
             try
             {
                 var Response = await _usersRepository.UpdateUserDetail(User, PreviousCellphone);
-                if (Response == true)
+                if (Response)
                 {
-                    TempData["SuccessMsg"] = ConstantStrings.SuccessMsgUp;
+                    TempData[ConstantStrings.MsgOK] = ConstantStrings.SuccessMsgUp;
                 }
                 else
                 {
-                    TempData["SuccessMsg"] = ConstantStrings.NoSuccessMsg;
+                    TempData[ConstantStrings.MsgOK] = ConstantStrings.NoSuccessMsg;
                 }
             }
             catch (Exception Ex)
             {
                 //Do something with the exception here
                 //Log exception to error log file or database
-                ViewData["SuccessMsg"] = Ex.Message.ToString();
+                ViewData[ConstantStrings.MsgOK] = Ex.Message.ToString();
             }
             return RedirectToAction(ConstantStrings.ExistingUser, ConstantStrings.Update);
         }

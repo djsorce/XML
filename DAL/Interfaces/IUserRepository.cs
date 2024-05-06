@@ -13,7 +13,7 @@ namespace DAL.Interfaces
         Task<bool?> AddUserToXML(UserDetail User);
         Task<List<UserDetail>?> GetListOfUsers();
         Task<bool> UpdateUserDetail(UserDetail User, string PreviousCellphone);
-        Task<UserDetail> GetSingleUserByCell(string Cellphone);
+        Task<UserDetail?> GetSingleUserByCell(string Cellphone);
         Task<bool?> DeleteUserByCell(string Cellphone);
     }
 }
