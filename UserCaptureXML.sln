@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserCaptureXML", "UserCaptu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{57109AFD-E159-4838-ACA7-8ECAC3C5A874}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C6889521-6080-48BB-8D17-11772628EE6E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User.Tests", "User.Tests", "{C6889521-6080-48BB-8D17-11772628EE6E}"
 	ProjectSection(SolutionItems) = preProject
 		Test\GlobalUsings.cs = Test\GlobalUsings.cs
 		Test\Test.csproj = Test\Test.csproj
